@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nativelib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/RadioActive/libs/nativelib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

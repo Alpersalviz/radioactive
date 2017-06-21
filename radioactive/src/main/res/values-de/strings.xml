@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RadioActive</string>
+    <string name="now_playing">Jetzt Spielen</string>
+    <string name="empty_ist">Keine Ergebnisse</string>
+    <string name="networking_disconnect">Verbindungs problem</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stopp</string>
+    <string name="channel_loading">Verladung...</string>
+    <string name="channel_error">Unerwartetes problem, berichtet server</string>
+
+</resources>

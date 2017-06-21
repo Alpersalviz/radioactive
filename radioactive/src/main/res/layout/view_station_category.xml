@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/_panel">
+
+    <ImageView
+        android:id="@+id/_imgStation"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/radioactivedark"
+        android:scaleType="centerCrop"></ImageView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/_lblRadioName"
+        android:textSize="18sp"
+        android:text="Powerturk"
+        android:textColor="@color/app_text"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/_lblDescription"
+        android:textSize="14sp"
+        android:text="Power"
+        android:textColor="@color/gray_text"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:layout_below="@+id/_lblRadioName" />
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/gridview_divider"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

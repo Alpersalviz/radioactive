@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/main_backgrounds">
+
+
+    <TextView
+        android:layout_height="25dp"
+        android:layout_width="match_parent"
+        android:id="@+id/_lblRadioName"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/app_text"
+        android:gravity="center_horizontal"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_height="25dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/_lblRadioName"
+        android:textSize="14sp"
+        android:textColor="@color/app_text"
+        android:gravity="center_horizontal"
+        android:id="@+id/_lblStreamTitle"
+        android:singleLine="true" />
+
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/_progress"
+        android:layout_below="@id/_lblStreamTitle" />
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/_progress"
+        android:id="@+id/_panel">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/_imgStation" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_height="25dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:textSize="14sp"
+        android:textColor="@color/app_text"
+        android:id="@+id/_lblChannel"
+        android:gravity="center_horizontal"
+        android:singleLine="true" />
+
+</RelativeLayout>

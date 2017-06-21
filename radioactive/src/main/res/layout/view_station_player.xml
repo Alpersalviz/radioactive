@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/actionbar"
+    android:id="@+id/_panel">
+
+    <View
+        android:layout_height="2dp"
+        android:layout_width="match_parent"
+        android:background="@color/light_blue">
+
+    </View>
+
+    <ImageView
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/_imgStation" />
+
+    <TextView
+        android:layout_height="20dp"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/_pbPlaying"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:id="@+id/_lblStationName"
+        android:singleLine="true"
+        android:textColor="@color/abs__bright_foreground_holo_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_height="20dp"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/_pbPlaying"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:id="@+id/_lblStreamTitle"
+        android:layout_below="@+id/_lblStationName"
+        android:textColor="@color/abs__bright_foreground_holo_dark"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:singleLine="true" />
+
+    <ProgressBar
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:id="@+id/_pbPlaying"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/_btnPlay" />
+
+
+    <ImageButton
+        android:layout_height="match_parent"
+        android:layout_width="50dp"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/_btnStop"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:src="@drawable/icon_stop" />
+
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="0.5dp"
+        android:background="#8fffffff"
+        android:layout_toLeftOf="@id/_btnStop"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"></View>
+
+    <ImageButton
+        android:layout_height="match_parent"
+        android:layout_width="50dp"
+        android:padding="5dp"
+        android:layout_toLeftOf="@+id/_btnStop"
+        android:id="@+id/_btnPlay"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:layout_alignParentStart="false"
+        android:src="@drawable/icon_play" />
+</RelativeLayout>

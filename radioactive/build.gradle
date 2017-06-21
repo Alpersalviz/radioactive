@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.googlecode.androidannotations:androidannotations:2.7.1'
+        classpath 'com.googlecode.androidannotations:androidannotations-api:2.7.1'
+    }
+}
+apply plugin: 'android'
+
+ext.androidAnnotationsVersion = '2.7.1';
+repositories {
+    mavenCentral()
+    maven {
+        url 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+}
+configurations {
+    apt
+}
+
+dependencies {
+    compile project(':Libraries:AppMsg')
+    compile 'com.android.support:support-v4:18.0.+'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.3.2-SNAPSHOT'
+    compile 'com.viewpagerindicator:library:2.4.2-SNAPSHOT'
+    apt "com.googlecode.androidannotations:androidannotations:${androidAnnotationsVersion}"
+    compile "com.googlecode.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
+    compile fileTree(dir: 'libs', includes: ['aac-decoder.jar', 'nativelib.jar', 'gson.jar'])
+}
+android.applicationVariants.all { variant ->
+    aptOutput = file("${project.buildDir}/source/apt_generated/${variant.dirName}")
+    println "****************************"
+    println "variant: ${variant.name}"
+    println "manifest:  ${variant.processResources.manifestFile}"
+    println "aptOutput:  ${aptOutput}"
+    println "****************************"
+
+    variant.javaCompile.doFirst {
+        println "*** compile doFirst ${variant.name}"
+        aptOutput.mkdirs()
+        variant.javaCompile.options.compilerArgs += [
+                '-processorpath', configurations.apt.getAsPath(),
+                '-AandroidManifestFile=' + variant.processResources.manifestFile,
+                '-s', aptOutput
+        ]
+    }
+
+    tasks.withType(Compile) {
+        options.encoding = 'UTF-8'
+    }
+
+}

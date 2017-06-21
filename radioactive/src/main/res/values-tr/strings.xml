@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RadioActive</string>
+    <string name="now_playing">Şimdi Çalıyor</string>
+    <string name="empty_ist">Sonuç Yok</string>
+    <string name="networking_disconnect">Bağlantı hatası</string>
+    <string name="play">Çal</string>
+    <string name="pause">Duraklat</string>
+    <string name="stop">Durdur</string>
+    <string name="channel_loading">Yükleniyor...</string>
+    <string name="channel_error">Beklenmedik sorun, sunucuya bildirildi</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Libraries/AppMsg/AppMsg.iml" filepath="$PROJECT_DIR$/Libraries/AppMsg/AppMsg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadioActive/RadioActive.iml" filepath="$PROJECT_DIR$/RadioActive/RadioActive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadioActiveProject.iml" filepath="$PROJECT_DIR$/RadioActiveProject.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_backgrounds">
+
+    <ListView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/_list"></ListView>
+
+    <TextView
+        android:id="@+id/_emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:drawableTop="@drawable/radioactive"
+        android:text="@string/empty_ist"
+        android:visibility="gone" />
+
+</RelativeLayout>

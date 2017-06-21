@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:layout_margin="5dp"
+        android:id="@+id/_imgStation"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:id="@+id/_lblStationName"
+        android:text="Radio Name"
+        android:textColor="@color/abs__bright_foreground_holo_dark"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/_smallIcon"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/_imgStation"
+        android:id="@+id/_lblStreamTitle"
+        android:text="Radio Title"
+        android:textColor="@color/abs__bright_foreground_disabled_holo_light"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/_lblStationName"
+        android:singleLine="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/_smallIcon" />
+
+    <ImageButton
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/_smallIcon"
+        android:src="@drawable/ic_launcher" />
+
+
+</RelativeLayout>
